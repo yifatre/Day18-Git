@@ -16,4 +16,6 @@ h1 {
     width: 100px;
     background-color:darkmagenta;
     margin: auto;
+    text-align: center;
+    z-index: 2;
 }
