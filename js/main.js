@@ -1,6 +1,10 @@
 'use strict'
+var gTimeInterval
+var gTimeOut
+var gCounter = 0
 
-function onBallClick(elBall, maxDiameter) {
+
+function onBallClick(elBall, maxDiameter = 600) {
     var ballRadius = +elBall.innerText + getRandomIntInclusive(20, 60)
     if (ballRadius > maxDiameter) ballRadius = 100
     elBall.style.width = ballRadius + 'px'
@@ -49,4 +53,43 @@ function onFourthBallClick() {
 
 function onFifthBallClick() {
     document.body.style.backgroundColor = getRandomColor()
+}
+
+function onSixthBallClick() {
+    const elBall1 = document.querySelector('.ball1')
+    const elBall2 = document.querySelector('.ball2')
+
+    elBall1.style.width = ''
+    elBall1.style.height = ''
+    elBall1.style.backgroundColor = ''
+    elBall1.innerText = 100
+
+    elBall2.style.width = ''
+    elBall2.style.height = ''
+    elBall2.style.backgroundColor = ''
+    elBall2.innerText = 100
+
+    document.body.style.backgroundColor = ''
+}
+
+function onSixthHover() {
+    gTimeOut = setTimeout(() => {
+        gTimeInterval = setInterval(runClickHandlers, 2000)
+    }, 2000);
+    // console.log('Hiiiiiii');
+}
+
+function onSixthHoverEnd() {
+    clearInterval(gTimeInterval)
+    clearTimeout(gTimeOut)
+}
+
+function runClickHandlers() {
+    onBallClick(document.querySelector('.ball1'))
+    onBallClick(document.querySelector('.ball2'))
+    onThirdBallClick()
+    onFourthBallClick()
+    gCounter++
+    // console.log('gCounter:	', gCounter)
+    if (gCounter === 10) onSixthHoverEnd()
 }
