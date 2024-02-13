@@ -1,8 +1,8 @@
 'use strict'
 
-function onBallClick(elBall) {
+function onBallClick(elBall, maxDiameter) {
     var ballRadius = +elBall.innerText + getRandomIntInclusive(20, 60)
-    if (ballRadius > 400) ballRadius = 100
+    if (ballRadius > maxDiameter) ballRadius = 100
     elBall.style.width = ballRadius + 'px'
     elBall.style.height = ballRadius + 'px'
     elBall.innerText = ballRadius
