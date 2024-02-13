@@ -14,10 +14,17 @@ h1 {
     border-radius: 50%;
     height: 100px;
     width: 100px;
-    background-color:darkmagenta;
     margin: auto;
     text-align: center;
     font-size: 22px;
     font-weight: bold;
     transition: width 1s, height 1s;
+}
+
+.ball1 {
+    background-color: darkmagenta;
+}
+
+.ball2 {
+    background-color: indianred;
 }
