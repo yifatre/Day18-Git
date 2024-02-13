@@ -39,10 +39,14 @@ function onFourthBallClick() {
     elBall1.style.width = radius1 + 'px'
     elBall1.style.height = radius1 + 'px'
     elBall1.innerText = radius1
-    
+
     var radius2 = +elBall1.innerText - getRandomIntInclusive(20, 60)
     if (radius2 < 100) radius2 = 100
     elBall2.style.width = radius2 + 'px'
     elBall2.style.height = radius2 + 'px'
     elBall2.innerText = radius2
+}
+
+function onFifthBallClick() {
+    document.body.style.backgroundColor = getRandomColor()
 }
