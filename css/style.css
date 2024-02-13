@@ -17,5 +17,6 @@ h1 {
     background-color:darkmagenta;
     margin: auto;
     text-align: center;
-    z-index: 2;
+    font-size: 22px;
+    font-weight: bold;
 }
